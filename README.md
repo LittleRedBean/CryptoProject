@@ -13,11 +13,11 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 - `argparse` (built-in)
 
 ## test cases:
-Prime number: 23
-generator: 5
-message: 2
-Alice publish (5, 5^6 mod 23) => (5,8), that is Alice's private key is 6
-Bob publish (5, 5^15 mod 23) => (5,19), that is Bob's private key is 15
+- Prime number: 23
+- generator: 5
+- message: 2
+- Alice publish (5, 5^6 mod 23) => (5,8), that is Alice's private key is 6
+- Bob publish (5, 5^15 mod 23) => (5,19), that is Bob's private key is 15
 
 ## Usage
 
