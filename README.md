@@ -12,7 +12,8 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 - Visual Studio / VS Code (optional)
 - `argparse` (built-in)
 
-## test cases:
+## test cases
+### test case1:
 - Prime number: 23
 - generator: 5
 - message: 2
@@ -21,4 +22,4 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 
 ## Usage
 
-Example: `python .\CyptoProject.py -t DH -m e -P 23 -b 5 -r 6 --publickey 19 -p 2`
+Example: `python .\CyptoProject.py -CipherType DH -m e -Prime 23 -generator 5 -privatekey 6 -publickey 19 -p 2`
