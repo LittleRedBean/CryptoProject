@@ -30,7 +30,7 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 #### Bob:
 - Public Key: 12258140044862796638
 - Private Key: 532147
-See tested command in Test2.txt file, screenshot is named test2.png
+- See tested command in Test2.txt file, screenshot is named test2.png
 
 ## Usage
 
