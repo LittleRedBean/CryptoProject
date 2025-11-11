@@ -1,0 +1,20 @@
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CyptoProject\CyptoProject> python .\CyptoProject.py --utilities GenPrime --bits 64
+Random 64-bit prime: 11926813518164136121
+
+Safe prime p: 12373260429731796467
+q: 6186630214865898233
+Generator g: 10546807778165541197
+
+alice
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CyptoProject\CyptoProject> python .\CyptoProject.py --utilities GenPubKey --Prime 12373260429731796467 --generator 10546807778165541197 --privatekey 461054
+Your public key is: 61585494543714566
+
+bob
+python .\CyptoProject.py --utilities GenPubKey --Prime 12373260429731796467 --generator 10546807778165541197 --privatekey 532147
+Your public key is: 12258140044862796638
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CyptoProject\CyptoProject> python .\CyptoProject.py --CipherType DH --mode e --publickey 12258140044862796638 --privatekey 461054 --plaintext "hello" --Prime 12373260429731796467
+Ciphertext is 1574781240659038215
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CyptoProject\CyptoProject> python .\CyptoProject.py --CipherType DH --mode d --publickey 61585494543714566 --privatekey 532147 --ciphertext 1574781240659038215 --Prime 12373260429731796467
+Plaintext is hello
