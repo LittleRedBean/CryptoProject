@@ -3,6 +3,7 @@ from pydoc import plain
 from random import choices
 from euclid_functions import *
 from FastExpo import *
+from ciphers import *
 
 def main():
     parser = argparse.ArgumentParser(description="Project for Diffie-Hellman Key Exchange Protocaol and RSA")
@@ -24,29 +25,16 @@ def main():
     CipherType=args.CipherType
     mode=args.mode
     generator=args.generator
-    Prime=args.Prime
+    Prime=int(
+    "822981df504ae0f1ec3e170c655da066c59d35925b12d50da01386ceb99e06fe"
+    "297011dcbbf79d7d1805a8c64b7c1fb67cd3d54b3187b71a97ff7f758bf2f1e3", 16)
     privatekey=args.privatekey
     publickey=args.publickey
-    
+    plaintext=args.plaintext
+    ciphertext=args.ciphertext
 
     if CipherType == "DH":
-        if mode=="e":
-            # Alice will comput (x*((b^lr) mod p)) mod p. Computing Ciphertext
-            plaintext=args.plaintext
-            FastExpo_result=fast_exp(publickey,privatekey,Prime)
-            ciphertext = (plaintext * FastExpo_result) % Prime
-            print(f"plaintext * FastExpo_result{FastExpo_result}:{plaintext * FastExpo_result}")
-            return print(f"Ciphertext is {ciphertext}")
-        elif mode == "d":
-            # Bob will compute [(b^r mod p)^l mod p]^-1 * (x*((b^lr) mod p)) mod p
-            # Find ((b^r)mod p)^l inverse first
-            FastExpo_result=fast_exp(publickey,privatekey,Prime)
-            inverse=modinv(FastExpo_result, Prime)
-            #print(f"inverse:{inverse}")
-            #print(f"FastExpo_result{FastExpo_result}")
-            ciphertext=args.ciphertext
-            plaintext=(inverse * ciphertext) % Prime
-            return print(f"Plaintext is {plaintext}")
+        return El_gamal(mode,plaintext, ciphertext, publickey,privatekey, Prime)
     elif CipherType == "RSA":
         return
 if __name__ == "__main__":
