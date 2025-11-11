@@ -1,10 +1,12 @@
 from FastExpo import *
 from euclid_functions import *
-def El_gamal(mode: str, plaintext: int, ciphertext:int, publickey: int, privatekey: int, Prime: int):
+from utilities import *
+def El_gamal(mode: str, plaintext: str, ciphertext:int, publickey: int, privatekey: int, Prime: int):
     if mode=="e":
         # Alice will comput (x*((b^lr) mod p)) mod p. Computing Ciphertext
+        plaintext_int=str_to_int(plaintext)
         FastExpo_result=fast_exp(publickey,privatekey,Prime)
-        ciphertext = (plaintext * FastExpo_result) % Prime
+        ciphertext = (plaintext_int* FastExpo_result) % Prime
         #print(f"plaintext * FastExpo_result{FastExpo_result}:{plaintext * FastExpo_result}")
         return print(f"Ciphertext is {ciphertext}")
     elif mode == "d":
@@ -14,5 +16,6 @@ def El_gamal(mode: str, plaintext: int, ciphertext:int, publickey: int, privatek
         inverse=modinv(FastExpo_result, Prime)
         #print(f"inverse:{inverse}")
         #print(f"FastExpo_result{FastExpo_result}")
-        plaintext=(inverse * ciphertext) % Prime
+        plaintext_int=(inverse * ciphertext) % Prime
+        plaintext=int_to_str(plaintext_int)
         return print(f"Plaintext is {plaintext}")   
