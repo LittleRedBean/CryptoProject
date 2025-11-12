@@ -19,8 +19,7 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 - message: 2
 - Alice publish (5, 5^6 mod 23) => (5,8), that is Alice's private key is 6
 - Bob publish (5, 5^15 mod 23) => (5,19), that is Bob's private key is 15
-
-### test case2:
+### test case2: Passed
 - prime number: 12373260429731796467
 - generator: 10546807778165541197
 - Message/Plaintext: "hello"
@@ -32,8 +31,22 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 - Private Key: 532147
 - See tested command in Test2.txt file, screenshot is named test2.png
 
+## test cases of RSA
+### test case1: Passed
+- prime number: 198353806820510587300865597006300982661
+- Message/Plaintext: "hello"
+#### Alice: 
+- Public Key: 33530844196292470614850048744593233647
+- Pivate Key: 652315
+
 ## Usage
 
 Example: 
-- `python .\CyptoProject.py -CipherType DH -m e -Prime 23 -generator 5 -privatekey 6 -publickey 19 -p 2`
-- `python .\CyptoProject.py --utilities GenPubKey --Prime 12373260429731796467 --generator 10546807778165541197 --privatekey 461054`
+- `python .\CryptoProject.py -CipherType DH -m e -Prime 23 -generator 5 -privatekey 6 -publickey 19 -p 2`
+- `python .\CryptoProject.py --utilities GenPubKey --Prime 12373260429731796467 --generator 10546807778165541197 --privatekey 461054`
+#### Generating random keys for RSA
+- `python .\CryptoProject.py --utilities GenKey --CipherType RSA --bits 64 --privatekey 652315`
+#### RSA encryption
+- `python .\CryptoProject.py --CipherType RSA --mode e --Prime 198353806820510587300865597006300982661 --plaintext hello --publickey 33530844196292470614850048744593233647`
+#### RSA decryption
+- `python .\CryptoProject.py --CipherType RSA --mode d --Prime 198353806820510587300865597006300982661 --ciphertext 104980963682124885442006657033602004904 --privatekey 652315`
