@@ -3,6 +3,12 @@ from FastExpo import *
 from primes import *
 from euclid_functions import *
 
+def find_first_match(lst, target):
+    for i, value in enumerate(lst):
+        if value == target:
+            return value, i
+    return None, None
+
 def GenPrime(bits: int):
     p = generate_prime(bits)
     print(f"Random {bits}-bit prime: {p}")
@@ -56,7 +62,7 @@ def genKey_DH(bits: int, privatekey: int, Prime: int, generator: int):
 
     print(f"Your prime is {p_safe}")
     print(f"Your publickey is {publickey}")
-    print(f"Your privatekey is {privatekey}. KEEP THIS TO YOURSELF")
+    print(f"Your privatekey is {privatekey}. ")
     print(f"Send (Prime:{p_safe}, Public Key:{publickey}, generator:{g}) to Bob")
 
 
@@ -64,7 +70,7 @@ def genKey_DH(bits: int, privatekey: int, Prime: int, generator: int):
 
 def genKey(cipherType: str, bits: int, privatekey: int, Prime: int, generator: int):
     """
-    random RSA keys
+    random RSA keys or DH/El-gamal keys
     """
     if cipherType == "RSA":
         return genKey_RSA(bits,privatekey)

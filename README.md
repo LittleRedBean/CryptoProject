@@ -39,6 +39,19 @@ This project was developed as part of the *CS789 Cryptography* course at Boston 
 - Public Key: 33530844196292470614850048744593233647
 - Pivate Key: 652315
 
+## test cases of DH/El_gamal cracker
+### test case1: Passed
+- publick key: 44535
+- generator: 3578
+- prime: 44867
+- private key 371 (cracked)
+
+### test case2: Passed
+- publick key: 1312691860
+- generator: 1628055958
+- prime: 3653627807
+- private key 371 (cracked)
+
 ## Usage
 
 Example: 
