@@ -1,0 +1,28 @@
+python .\CryptoProject.py --utilities GenKey --CipherType DH --bits 64 --privatekey 652315
+Your prime is 10230367777186120979
+Your publickey is 3894587344118655658
+Your privatekey is 652315.
+Send (Prime:10230367777186120979, Public Key:3894587344118655658, generator:8482488728453326461) to Bob
+
+test 1
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --utilities GenKey --CipherType DH --bits 16 --privatekey 371
+Your prime is 44867
+Your publickey is 44535
+Your privatekey is 371.
+Send (Prime:44867, Public Key:44535, generator:3578) to Bob
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject>
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject>  python .\CryptoProject.py --CipherType DH --mode c --generator 3578 --publickey 44535 --Prime 44867
+value test, j None
+value test, j 159
+Your i*m + j is: 1*212 + 159 = 371
+
+test 2
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --utilities GenKey --CipherType DH --bits 32 --privatekey 371
+Your prime is 3653627807
+Your publickey is 1312691860
+Your privatekey is 371.
+Send (Prime:3653627807, Public Key:1312691860, generator:1628055958) to Bob
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject>  python .\CryptoProject.py --CipherType DH --mode c --generator 1628055958 --publickey 1312691860 --Prime 3653627807
+Your i*m + j is: 0*60446 + 371 = 371
