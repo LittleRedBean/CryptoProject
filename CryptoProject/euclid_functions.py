@@ -1,3 +1,4 @@
+"""Euclid Functions"""
 def gcd_euclid(a: int, b: int) -> int:
     """Greatest common divisor via iterative Euclidean algorithm."""
     a, b = abs(a), abs(b)

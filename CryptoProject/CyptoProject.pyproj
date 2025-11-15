@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8cf067d3-68af-408f-867a-31233c93045d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CyptoProject.py</StartupFile>
+    <StartupFile>CryptoProject.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,9 +21,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CyptoProject.py" />
+    <Compile Include="CryptoProject.py" />
     <Compile Include="euclid_functions.py" />
     <Compile Include="FastExpo.py" />
+    <Compile Include="utilities.py" />
+    <Compile Include="primes.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

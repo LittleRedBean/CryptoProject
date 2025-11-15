@@ -1,0 +1,11 @@
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --utilities GenKey --CipherType RSA --bits 64 --privatekey 652315
+Your prime is 198353806820510587300865597006300982661
+Your publickey is 33530844196292470614850048744593233647
+Your privatekey is 652315. KEEP THIS TO YOURSELF
+Send (Prime: 198353806820510587300865597006300982661, Public key:33530844196292470614850048744593233647) to Bob
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType RSA --mode e --Prime 198353806820510587300865597006300982661 --plaintext hello --publickey 33530844196292470614850048744593233647
+Your ciphertext is 104980963682124885442006657033602004904
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType RSA --mode d --Prime 198353806820510587300865597006300982661 --ciphertext 104980963682124885442006657033602004904 --privatekey 652315
+Your plaintext is hello
