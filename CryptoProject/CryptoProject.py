@@ -47,7 +47,14 @@ def main():
                 else:
                     return cracker_DH(generator,publickey,Prime)
         elif CipherType == "RSA":
-            return RSA(mode,plaintext,ciphertext,publickey,privatekey,Prime)
+            if mode == "c":
+                if Prime is None or publickey is None or ciphertext is None:
+                    parser.error("--Prime, --publickey and --ciphertext are required when using RSA crack mode")
+                else:
+                    return cracker_RSA(Prime, publickey, ciphertext)
+            else:
+                return RSA(mode, plaintext, ciphertext, publickey, privatekey, Prime)
+    
     elif util != None:
         if util == "GenPrime":
             if bits is None:
