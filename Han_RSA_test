@@ -1,0 +1,15 @@
+CryptoProject\CryptoProject.py --utilities GenKey --CipherType RSA --bits 64 --privatekey 11
+Your prime is 148932600719811442742028367986545599873
+Your publickey is 94775291367152736274833132496947377527
+Your privatekey is 11. KEEP THIS TO YOURSELF
+Send (Prime: 148932600719811442742028367986545599873, Public key:94775291367152736274833132496947377527) to Bob
+=====
+
+\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode e --Prime 148932600719811442742028367986545599873 --plaintext helloCS789 --publickey 94775291367152736274833132496947377527
+Your ciphertext is 142710039191263453799192632577370582136
+=====
+
+\CryptoProject\CryptoProject.py --CipherType RSA --mode d --Prime 148932600719811442742028367986545599873 --ciphertext 142710039191263453799192632577370582136 --privatekey 11
+Your plaintext is helloCS78
+=====
+
