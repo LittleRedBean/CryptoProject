@@ -1,5 +1,4 @@
-author
-Uzay Isin Alici
+Author: Uzay Isin Alici
 
 ========================================
 RSA key generation for Uzay
