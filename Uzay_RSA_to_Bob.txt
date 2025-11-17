@@ -1,0 +1,57 @@
+author
+Uzay Isin Alici
+
+========================================
+RSA key generation for Uzay
+========================================
+
+Command:
+python3 CryptoProject.py --utilities GenKey --CipherType RSA --bits 64 --privatekey 444777
+
+Output:
+Your prime is 156567662500232183920386643523093677477
+Your publickey is 135907969862936130203444511219824993229
+Your privatekey is 444777. KEEP THIS TO YOURSELF
+Send (Prime: 156567662500232183920386643523093677477, Public key:135907969862936130203444511219824993229) to Bob
+
+So Uzay's RSA parameters are:
+- Modulus (Prime / n): 156567662500232183920386643523093677477
+- Public key (e):      135907969862936130203444511219824993229
+- Private key (d):     444777
+
+========================================
+RSA message from Uzay to Bob
+========================================
+
+Plaintext:
+"This is the best Cryptography course"
+
+Encryption command:
+python3 CryptoProject.py --CipherType RSA --mode e \
+  --Prime 156567662500232183920386643523093677477 \
+  --plaintext "This is the best Cryptography course" \
+  --publickey 135907969862936130203444511219824993229
+
+Output:
+Your ciphertext is 135331732494250057625871310376490499059
+
+So the encrypted message that Uzay sends to Bob is:
+Ciphertext = 135331732494250057625871310376490499059
+
+========================================
+Decryption (by Bob, using Uzay's ciphertext)
+========================================
+
+To decrypt, Bob would run:
+
+python3 CryptoProject.py --CipherType RSA --mode d \
+  --Prime 156567662500232183920386643523093677477 \
+  --ciphertext 135331732494250057625871310376490499059
+  --privatekey 444777
+
+//Note: In a real RSA scenario, Bob would NOT know my private key. 
+This decryption command is only to demonstrate correctness for the course project.
+
+Expected output:
+Plaintext is This is the best Cryptography course
+
