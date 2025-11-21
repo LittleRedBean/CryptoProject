@@ -1,20 +1,27 @@
-C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --utilities GenKey --CipherType RSA --bits 64 --privatekey 11 
-Your prime is 184252317370745344926975560769298140781
-Your publickey is 67000842680271034509023868805164883699
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --utilities GenKey --CipherType RSA --bits 32 --privatekey 11 
+Your prime is 13911286484848065913
+Your publickey is 8852636849209687207
 Your privatekey is 11. KEEP THIS TO YOURSELF
-Send (Prime: 184252317370745344926975560769298140781, Public key:67000842680271034509023868805164883699) to Bob
+Send (Prime: 13911286484848065913, Public key:8852636849209687207) to Bob
 
 =====
 
-C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode e --Prime 184252317370745344926975560769298140781 --plaintext hi --publickey 67000842680271034509023868805164883699 
-RSA encryptcalculate_cost: 0.000062 s
-Your ciphertext is 71477770447217785337360109433366265033
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode e --Prime 13911286484848065913 --plaintext hi --publickey 8852636849209687207 
+RSA encryptcalculate_cost: 0.000031 s
+Your ciphertext is 8701063378221066559
 
-====
+=====
 
-C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode d --Prime 184252317370745344926975560769298140781 --ciphertext 71477770447217785337360109433366265033 --privatekey 11 
-RSA decryptcalculate_cost: 0.000010 s
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode d --Prime 13911286484848065913 --ciphertext 8701063378221066559 --privatekey 11 
+RSA decryptcalculate_cost: 0.000009 s
 Your plaintext is hi
 
 =====
 
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode c --Prime 13911286484848065913 --publickey 8852636849209687207 --ciphertext 8701063378221066559 
+Cracked RSA!
+p = 3289289327
+q = 4229268119
+Recovered private key d = 11
+Recovered plaintext = hi
+RSA Cracker calculate_cost: 454.024185 s
