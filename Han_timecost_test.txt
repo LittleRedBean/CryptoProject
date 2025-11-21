@@ -1,0 +1,20 @@
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --utilities GenKey --CipherType RSA --bits 64 --privatekey 11 
+Your prime is 184252317370745344926975560769298140781
+Your publickey is 67000842680271034509023868805164883699
+Your privatekey is 11. KEEP THIS TO YOURSELF
+Send (Prime: 184252317370745344926975560769298140781, Public key:67000842680271034509023868805164883699) to Bob
+
+=====
+
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode e --Prime 184252317370745344926975560769298140781 --plaintext hi --publickey 67000842680271034509023868805164883699 
+RSA encryptcalculate_cost: 0.000062 s
+Your ciphertext is 71477770447217785337360109433366265033
+
+====
+
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --CipherType RSA --mode d --Prime 184252317370745344926975560769298140781 --ciphertext 71477770447217785337360109433366265033 --privatekey 11 
+RSA decryptcalculate_cost: 0.000010 s
+Your plaintext is hi
+
+=====
+
