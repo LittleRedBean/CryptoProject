@@ -41,7 +41,7 @@ def main():
         if CipherType == "DH":
             if mode == "e" or mode == "d":
                 result, elapsed_time = El_gamal(mode, plaintext, ciphertext, publickey, privatekey, Prime)
-                print(f"DH/ElGamal {'encrypt' if mode == 'e' else 'decrypt'}calculate_cost: {elapsed_time:.6f} s")
+                print(f"DH/ElGamal {'encrypt' if mode == 'e' else 'decrypt'} cost: {elapsed_time:.6f} s")
                 return result
                 #return El_gamal(mode,plaintext,ciphertext,publickey,privatekey,Prime)
             elif mode == "c":
@@ -49,7 +49,7 @@ def main():
                     parser.error("--generator and --Prime and --publickey are required when using Modinv")
                 else:
                     cracked_x, elapsed_time = cracker_DH(generator, publickey, Prime)
-                    print(f"DH Cracker calculate_cost: {elapsed_time:.6f} s")
+                    print(f"DH Cracker cost: {elapsed_time:.6f} s")
                     #return cracker_DH(generator,publickey,Prime)
                     if cracked_x is not None:
                         pass
@@ -60,12 +60,12 @@ def main():
                     parser.error("--Prime, --publickey and --ciphertext are required when using RSA crack mode")
                 else:
                     result, elapsed_time = cracker_RSA(Prime, publickey, ciphertext)
-                    print(f"RSA Cracker calculate_cost: {elapsed_time:.6f} s")
+                    print(f"RSA Cracker cost: {elapsed_time:.6f} s")
                     return
                     #return cracker_RSA(Prime, publickey, ciphertext)
             else:
                 result, elapsed_time = RSA(mode, plaintext, ciphertext, publickey, privatekey, Prime)
-                print(f"RSA {'encrypt' if mode == 'e' else 'decrypt'}calculate_cost: {elapsed_time:.6f} s")
+                print(f"RSA {'encrypt' if mode == 'e' else 'decrypt'} cost: {elapsed_time:.6f} s")
                 if mode == 'e':
                     print(f"Your ciphertext is {result}")
                 elif mode == 'd':
