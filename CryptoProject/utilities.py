@@ -64,7 +64,7 @@ def genKey_DH(bits: int, privatekey: int, Prime: int, generator: int):
 
     print(f"Your prime is {p_safe}")
     print(f"Your publickey is {publickey}")
-    print(f"Your privatekey is {privatekey}. ")
+    print(f"Your privatekey is {privatekey}. KEEP THIS TO YOURSELF")
     print(f"Send (Prime:{p_safe}, Public Key:{publickey}, generator:{g}) to Bob")
 
 

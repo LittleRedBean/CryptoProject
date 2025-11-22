@@ -1,0 +1,46 @@
+[This is explanation]
+Bob use Alice' public key to send message.
+Bob RSA encryption command:
+	python .\CryptoProject.py --CipherType  RSA --Prime {ALICE PRIME} --publickey {ALICE PUBLICKEY} --mode e --plaintext {msg}
+Bob ElGamal encryption command:
+	python .\CryptoProject.py --CipherType  DH --Prime {ALICE PRIME} --publickey {ALICE PUBLICKEY} --privatekey {BOB PRIVATEKEY} --mode e --plaintext {msg}
+	python .\CryptoProject.py --util GenKey --bits {BITS} --Prime {ALICE PRIME} --privatekey {BOB PRIVATEKEY} --generator {ALICE GENERATOR} --CipherType DH
+          ^
+           |
+	this will generator Bob's key public key that will be use by Alice to decrypt the message 
+
+Round 1
+Alice: Han
+	RSA:  Prime: 9722290417014292357, Public key:2859497179631413293
+	plaintext? :
+	ElGamal:  Prime:3972484403, Public Key:3344674192, generator:3921742394
+	plaintext? :
+Bob: Rain
+	RSA ciphertext: 6116458212281869526
+	
+	ElGamal ciphertext: 207987784
+	Prime:3972484403, Public Key:2764685244, generator:3921742394
+Eve (RSA): Uzay
+	RSA privatekey?:
+Eve (ElGamal): Zahra
+	ElGamal privatekey?:
+
+Round 2
+Alice: Rain
+Bob: Uzay
+Eve (RSA): Zahra
+Eve (ElGamal): Han
+
+
+Round 3
+Alice: Uzay
+Bob: Zahra
+Eve (RSA): Han
+Eve (ElGamal): Rain
+
+
+Round 4
+Alice: Zahra
+Bob: Han
+Eve (RSA): Rain
+Eve (ElGamal): Uzay
