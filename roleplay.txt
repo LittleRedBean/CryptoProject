@@ -12,9 +12,9 @@ Bob ElGamal encryption command:
 Round 1
 Alice: Han
 	RSA:  Prime: 9722290417014292357, Public key:2859497179631413293
-	plaintext? :
+	plaintext? :R41nMn
 	ElGamal:  Prime:3972484403, Public Key:3344674192, generator:3921742394
-	plaintext? :
+	plaintext? :MoMo
 Bob: Rain
 	RSA ciphertext: 6116458212281869526
 	
