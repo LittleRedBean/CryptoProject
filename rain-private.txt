@@ -1,0 +1,25 @@
+round 1
+
+[RSA]
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType  RSA --Prime 9722290417014292357 --publickey 2859497179631413293 --mode e --plaintext R41nMn
+Your ciphertext is 6116458212281869526
+[DH]
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType  DH --Prime 3972484403 --publickey 3344674192 --privatekey 329 --mode e --plaintext Diffie
+Ciphertext is 207987784
+
+python .\CryptoProject.py --util GenKey --bits 32 --Prime 3972484403 --privatekey 329 --generator 3921742394 --CipherType DH
+Your prime is 3972484403
+Your publickey is 2764685244
+Your privatekey is 329. KEEP THIS TO YOURSELF
+Send (Prime:3972484403, Public Key:2764685244, generator:3921742394) to Bob
+
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --util GenKey --CipherType RSA --bits 32 --privatekey 2373
+Your prime is 13065909094938011617
+Your publickey is 7394654827089811353
+Your privatekey is 2373. KEEP THIS TO YOURSELF
+Send (Prime: 13065909094938011617, Public key:7394654827089811353) to Bob
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --util GenKey --CipherType DH --bits 32 --privatekey 6371
+Your prime is 3409907867
+Your publickey is 1760433634
+Your privatekey is 6371. KEEP THIS TO YOURSELF
+Send (Prime:3409907867, Public Key:1760433634, generator:2164262515) to Bob
