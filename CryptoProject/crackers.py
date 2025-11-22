@@ -3,6 +3,8 @@ from FastExpo import *
 from euclid_functions import *
 from utilities import *
 
+
+@timing
 def cracker_DH(b,a,p):
     """
     Solve b^x = a (mod p), using Baby-step Gian-step Algorithm
@@ -30,11 +32,16 @@ def cracker_DH(b,a,p):
             break
 
     if j is None:
-        return print("can't find a solution for find a(b^-1)^im=b^j, cracking failed")
+        #return print("can't find a solution for find a(b^-1)^im=b^j, cracking failed")
+        print("can't find a solution for find a(b^-1)^im=b^j, cracking failed")
+        return None
     else:
-        return print(f"Your i*m + j is: {i}*{m} + {j} = {i*m + j}")
+        #return print(f"Your i*m + j is: {i}*{m} + {j} = {i*m + j}")
+        result = i * m + j
+        print(f"Your i*m + j is: {i}*{m} + {j} = {result}")
+        return result
 
-
+@timing
 def cracker_RSA(Prime: int, publickey: int, ciphertext: int):
     """
     Crack small RSA modulus:
@@ -52,7 +59,9 @@ def cracker_RSA(Prime: int, publickey: int, ciphertext: int):
             p = i
             break
     if p is None:
-        return print("Failed to factor n; cracking aborted.")
+        print("Failed to factor n; cracking aborted.")
+        return None
+        #return print("Failed to factor n; cracking aborted.")
     q = n // p
 
     phi = (p - 1) * (q - 1)
@@ -67,8 +76,8 @@ def cracker_RSA(Prime: int, publickey: int, ciphertext: int):
     print(f"Recovered private key d = {d}")
     print(f"Recovered plaintext = {plaintext}")
 
- 
+    #return
+    return p, q, d, plaintext
 
-    return
 def cracker():
     return
