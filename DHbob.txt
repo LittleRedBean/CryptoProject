@@ -1,0 +1,10 @@
+C:\Users\jiaha\PycharmProjects\566FinalProject\.venv\Scripts\python.exe C:\Users\jiaha\PycharmProjects\CryptoProject\CryptoProject\CryptoProject.py --utilities GenKey --CipherType DH --bits 32 --privatekey 11 --Prime 3972484403 --generator 3921742394 
+Your prime is 3972484403
+Your publickey is 1056124295
+Your privatekey is 11. 
+Send (Prime:3972484403, Public Key:1056124295, generator:3921742394) to Bob
+
+
+--CipherType DH --mode d --Prime 3972484403 --ciphertext 3065548952 --publickey 3344674192 --privatekey 11 
+DH/ElGamal decrypt cost: 0.000016 s
+Plaintext is hi

@@ -1,0 +1,20 @@
+--utilities GenKey --CipherType RSA --bits 32 --privatekey 17 
+Your prime is 9722290417014292357
+Your publickey is 2859497179631413293
+Your privatekey is 17. KEEP THIS TO YOURSELF
+Send (Prime: 9722290417014292357, Public key:2859497179631413293) to Bob
+
+--utilities GenKey --CipherType DH --bits 32 --privatekey 17 
+Your prime is 3972484403
+Your publickey is 3344674192
+Your privatekey is 17. 
+Send (Prime:3972484403, Public Key:3344674192, generator:3921742394) to Bob
+
+--CipherType DH --mode e --Prime 3972484403 --plaintext hi --publickey 1056124295 --privatekey 17 
+DH/ElGamal encrypt cost: 0.000008 s
+Ciphertext is 3065548952
+
+
+--CipherType DH --mode c --Prime 3972484403 --generator 3921742394 --publickey 3344674192 
+Your i*m + j is: 0*63028 + 17 = 17
+DH Cracker cost: 0.212860 s
