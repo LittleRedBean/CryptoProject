@@ -2,6 +2,8 @@
 from FastExpo import *
 from primes import *
 from euclid_functions import *
+import time
+from functools import wraps
 
 def find_first_match(lst, target):
     for i, value in enumerate(lst):
@@ -76,3 +78,22 @@ def genKey(cipherType: str, bits: int, privatekey: int, Prime: int, generator: i
         return genKey_RSA(bits,privatekey)
     elif cipherType == "DH":
         return genKey_DH(bits,privatekey,Prime,generator)
+
+
+def timing(func):
+    """
+    A decorator that measures the execution time of a function and returns (original result, execution time in seconds).
+    """
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.perf_counter()
+
+        result = func(*args, **kwargs)
+
+        end_time = time.perf_counter()
+        execution_time = end_time - start_time
+
+        return result, execution_time
+
+    return wrapper

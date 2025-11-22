@@ -40,14 +40,39 @@ def main():
     if util == None:
         if CipherType == "DH":
             if mode == "e" or mode == "d":
-                return El_gamal(mode,plaintext,ciphertext,publickey,privatekey,Prime)
+                result, elapsed_time = El_gamal(mode, plaintext, ciphertext, publickey, privatekey, Prime)
+                print(f"DH/ElGamal {'encrypt' if mode == 'e' else 'decrypt'} cost: {elapsed_time:.6f} s")
+                return result
+                #return El_gamal(mode,plaintext,ciphertext,publickey,privatekey,Prime)
             elif mode == "c":
                 if generator==None or publickey==None or Prime==None:
                     parser.error("--generator and --Prime and --publickey are required when using Modinv")
                 else:
-                    return cracker_DH(generator,publickey,Prime)
+                    cracked_x, elapsed_time = cracker_DH(generator, publickey, Prime)
+                    print(f"DH Cracker cost: {elapsed_time:.6f} s")
+                    #return cracker_DH(generator,publickey,Prime)
+                    if cracked_x is not None:
+                        pass
+                    return
         elif CipherType == "RSA":
-            return RSA(mode,plaintext,ciphertext,publickey,privatekey,Prime)
+            if mode == "c":
+                if Prime is None or publickey is None or ciphertext is None:
+                    parser.error("--Prime, --publickey and --ciphertext are required when using RSA crack mode")
+                else:
+                    result, elapsed_time = cracker_RSA(Prime, publickey, ciphertext)
+                    print(f"RSA Cracker cost: {elapsed_time:.6f} s")
+                    return
+                    #return cracker_RSA(Prime, publickey, ciphertext)
+            else:
+                result, elapsed_time = RSA(mode, plaintext, ciphertext, publickey, privatekey, Prime)
+                print(f"RSA {'encrypt' if mode == 'e' else 'decrypt'} cost: {elapsed_time:.6f} s")
+                if mode == 'e':
+                    print(f"Your ciphertext is {result}")
+                elif mode == 'd':
+                    print(f"Your plaintext is {result}")
+                return
+                #return RSA(mode, plaintext, ciphertext, publickey, privatekey, Prime)
+    
     elif util != None:
         if util == "GenPrime":
             if bits is None:
