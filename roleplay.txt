@@ -6,7 +6,7 @@ Bob ElGamal encryption command:
 	python .\CryptoProject.py --CipherType  DH --Prime {ALICE PRIME} --publickey {ALICE PUBLICKEY} --privatekey {BOB PRIVATEKEY} --mode e --plaintext {msg}
 	python .\CryptoProject.py --util GenKey --bits {BITS} --Prime {ALICE PRIME} --privatekey {BOB PRIVATEKEY} --generator {ALICE GENERATOR} --CipherType DH
           ^
-           |
+          |
 	this will generate Bob's key public key that will be use by Alice to decrypt the message 
 
 Round 1
