@@ -4,8 +4,9 @@ round 1
 PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType  RSA --Prime 9722290417014292357 --publickey 2859497179631413293 --mode e --plaintext R41nMn
 Your ciphertext is 6116458212281869526
 [DH]
-PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType  DH --Prime 3972484403 --publickey 3344674192 --privatekey 329 --mode e --plaintext Diffie
-Ciphertext is 207987784
+PS C:\Users\Rain\iCloudDrive\Documents\Boston University\CS789 Crytography\CryptoProject\CryptoProject> python .\CryptoProject.py --CipherType  DH --Prime 3972484403 --publickey 3344674192 --privatekey 329 --mode e --plaintext MoMo
+DH/ElGamal encrypt cost: 0.000007 s
+Your ciphertext is 2416553664
 
 python .\CryptoProject.py --util GenKey --bits 32 --Prime 3972484403 --privatekey 329 --generator 3921742394 --CipherType DH
 Your prime is 3972484403

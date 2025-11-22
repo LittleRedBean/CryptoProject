@@ -42,7 +42,7 @@ def main():
             if mode == "e" or mode == "d":
                 result, elapsed_time = El_gamal(mode, plaintext, ciphertext, publickey, privatekey, Prime)
                 print(f"DH/ElGamal {'encrypt' if mode == 'e' else 'decrypt'} cost: {elapsed_time:.6f} s")
-                return result
+                return print(f"Your ciphertext is {result}")
                 #return El_gamal(mode,plaintext,ciphertext,publickey,privatekey,Prime)
             elif mode == "c":
                 if generator==None or publickey==None or Prime==None:
