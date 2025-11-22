@@ -34,8 +34,6 @@ def cracker_DH(b,a,p):
     else:
         return print(f"Your i*m + j is: {i}*{m} + {j} = {i*m + j}")
 
-
-
 def cracker_RSA():
     return
 def cracker():

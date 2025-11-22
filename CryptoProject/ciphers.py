@@ -33,7 +33,6 @@ def RSA_decrypt(prime: int, privatekey: int, ciphertext: int):
     plaintext_int=fast_exp(ciphertext,privatekey,prime)
     return print(f"Your plaintext is {int_to_str(plaintext_int)}")
      
-
 def RSA(mode: str, plaintext: str, ciphertext:int, publickey: int, privatekey: int, prime: int):
     if mode=="e":
         return RSA_encrypt(prime,publickey,plaintext)
