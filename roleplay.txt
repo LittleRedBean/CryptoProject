@@ -27,10 +27,16 @@ Eve (ElGamal): Zahra
 
 Round 2
 Alice: Rain
+	RSA: Prime: 13065909094938011617, Public key:7394654827089811353
+	plaintext? :
+	Elgmal: Prime:3409907867, Public Key:1760433634, generator:2164262515
+	plaintext? :
 Bob: Uzay
+	RSA ciphertext:
+	ElGamal ciphertext:
+	ElGamal:
 Eve (RSA): Zahra
 Eve (ElGamal): Han
-
 
 Round 3
 Alice: Uzay
