@@ -25,3 +25,10 @@ python3 CryptoProject.py --CipherType RSA --mode e \
 
 Output ciphertext:
 14751078026651914423
+
+RSA decryption:
+python3 CryptoProject.py --CipherType RSA --mode c \
+  --Prime 16648017335018913709 \
+  --publickey 8111911387303012689 \
+  --ciphertext 14751078026651914423
+
