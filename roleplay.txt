@@ -21,7 +21,7 @@ Bob: Rain
 	ElGamal ciphertext: 207987784
 	Prime:3972484403, Public Key:2764685244, generator:3921742394
 Eve (RSA): Uzay
-	RSA privatekey?:
+	RSA privatekey: 17
 Eve (ElGamal): Zahra
 	ElGamal privatekey?:
 
@@ -32,9 +32,12 @@ Alice: Rain
 	Elgmal: Prime:3409907867, Public Key:1760433634, generator:2164262515
 	plaintext? :
 Bob: Uzay
-	RSA ciphertext:
-	ElGamal ciphertext:
+	RSA ciphertext: 11120201060620861388
+	ElGamal ciphertext: 2886096904
 	ElGamal:
+ 		Prime: 3409907867
+        Public Key: 1667090527
+        generator: 2164262515
 Eve (RSA): Zahra
 Eve (ElGamal): Han
 
