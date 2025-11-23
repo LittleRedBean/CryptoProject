@@ -1,0 +1,66 @@
+ın Alıcı
+
+========================================
+Round 1 – RSA Encryption (Alice → Bob)
+========================================
+
+Plaintext:
+CS789
+
+Command:
+python3 CryptoProject.py --CipherType RSA --mode e \
+  --Prime 16648017335018913709 \
+  --plaintext "CS789" \
+  --publickey 8111911387303012689
+
+Output:
+Your ciphertext is 14751078026651914423
+
+Ciphertext to send:
+14751078026651914423
+
+
+========================================
+Round 1 – ElGamal / DH Encryption (Alice → Bob)
+========================================
+
+Plaintext:
+CatchMeIfYouCan
+
+Command:
+python3 CryptoProject.py --CipherType DH --mode e \
+  --Prime 2211343019 \
+  --publickey 1349828643 \
+  --privatekey 444777 \
+  --plaintext "CatchMeIfYouCan"
+
+Output:
+Your ciphertext is 1687592705
+
+Ciphertext to send:
+1687592705
+
+
+========================================
+DH / ElGamal Public Parameters (Uzay)
+========================================
+
+Generated using:
+python3 CryptoProject.py --utilities GenKey --CipherType DH --bits 32 --privatekey 444777
+
+Prime (p): 2211343019
+Generator (g): 1982689334
+Public key (y): 1349828643
+Private key: 444777 (KEEP THIS TO YOURSELF)
+
+
+========================================
+RSA Public Parameters (Uzay)
+========================================
+
+Generated using:
+python3 CryptoProject.py --utilities GenKey --CipherType RSA --bits 32 --privatekey 444777
+
+Prime (n): 16648017335018913709
+Public key (e): 8111911387303012689
+Private key (d): 444777 (KEEP THIS TO YOURSELF)
