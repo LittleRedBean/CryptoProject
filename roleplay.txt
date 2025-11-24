@@ -40,6 +40,8 @@ Bob: Uzay
         generator: 2164262515
 Eve (RSA): Zahra
 Eve (ElGamal): Han
+	Alice's privatekey: 6371
+	Bob's privatekey: 2839600417
 
 Round 3
 Alice: Uzay
