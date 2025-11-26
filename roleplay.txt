@@ -32,8 +32,8 @@ Alice: Rain
 	Elgmal: Prime:3409907867, Public Key:1760433634, generator:2164262515
 	plaintext? :
 Bob: Uzay
-	RSA ciphertext: 11120201060620861388
-	ElGamal ciphertext: 2886096904
+	RSA ciphertext: 9708876836190433056
+	ElGamal ciphertext: 2020660508
 	ElGamal:
  		Prime: 3409907867
         Public Key: 1667090527
