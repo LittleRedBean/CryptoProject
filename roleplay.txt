@@ -46,9 +46,9 @@ Eve (ElGamal): Han
 Round 3
 Alice: Uzay
 	RSA: Prime: 16648017335018913709, Public key:8111911387303012689
-	plaintext? :
+	plaintext : Thanx
 	ElGamal: Prime: 2211343019, Public Key: 1349828643, generator: 1982689334
-	plaintext? :
+	plaintext : 1rf4
 Bob: Zahra
 	RSA ciphertext: 6627705720679597883
 	ElGamal ciphertext: 1359441226
