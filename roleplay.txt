@@ -17,13 +17,12 @@ Alice: Han
 	plaintext? :MoMo
 Bob: Rain
 	RSA ciphertext: 6116458212281869526
-	
 	ElGamal ciphertext: 207987784
 	Prime:3972484403, Public Key:2764685244, generator:3921742394
 Eve (RSA): Uzay
 	RSA privatekey: 17
 Eve (ElGamal): Zahra
-	ElGamal privatekey?:
+	ElGamal privatekey?: 329
 
 Round 2
 Alice: Rain
@@ -39,6 +38,7 @@ Bob: Uzay
         Public Key: 1667090527
         generator: 2164262515
 Eve (RSA): Zahra
+	RSA privatekey: 2373
 Eve (ElGamal): Han
 	Alice's privatekey: 6371
 	Bob's privatekey: 2839600417
@@ -46,13 +46,20 @@ Eve (ElGamal): Han
 Round 3
 Alice: Uzay
 	RSA: Prime: 16648017335018913709, Public key:8111911387303012689
+	plaintext? :
+	ElGamal: Prime: 2211343019, Public Key: 1349828643, generator: 1982689334
+	plaintext? :
 Bob: Zahra
+	RSA ciphertext: 6627705720679597883
+	ElGamal ciphertext: 1359441226
 Eve (RSA): Han
 Eve (ElGamal): Rain
 
 
 Round 4
 Alice: Zahra
+	RSA: Prime: 1769364996067548066402624820326407074293, Public key:1273088781689364742877410587121282617805
+	ElGamal: Prime:3972484403, Public Key:1214996363, generator:3921742394
 Bob: Han
 Eve (RSA): Rain
 Eve (ElGamal): Uzay
