@@ -29,10 +29,24 @@ def str_to_int(plaintext: str):
     return plaintext_int
 
 def int_to_str(number: int):
-    length= (number.bit_length() + 7)//8
-    plaintext_bytes=number.to_bytes(length,byteorder='big')
-    plaintext=plaintext_bytes.decode('utf-8')
-    return plaintext
+    length = max(1, (number.bit_length() + 7) // 8)
+    plaintext_bytes = number.to_bytes(length, byteorder='big')
+
+    try:
+        return plaintext_bytes.decode('utf-8')
+    except UnicodeDecodeError:
+        hex_repr = plaintext_bytes.hex()
+        try:
+            latin1_text = plaintext_bytes.decode('latin-1')
+        except Exception:
+            latin1_text = None
+
+        print("[int_to_str] can not decode UTF-8.")
+        print(f"[int_to_str] Raw bytes (hex): {hex_repr}")
+        if latin1_text is not None:
+            print(f"[int_to_str] Latin-1 fallback: {latin1_text!r}")
+            
+        return hex_repr
 
 def GenPubKey(generator: int, privatekey: int, Prime: int):
     return fast_exp(generator,privatekey,Prime)
