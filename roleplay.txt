@@ -41,7 +41,7 @@ Eve (RSA): Zahra
 	RSA privatekey: 2373
 Eve (ElGamal): Han
 	Alice's privatekey: 6371
-	Bob's privatekey: 2839600417
+	Bob's privatekey: 444777
 
 Round 3
 Alice: Uzay
@@ -53,6 +53,7 @@ Bob: Zahra
 	RSA ciphertext: 6627705720679597883
 	ElGamal ciphertext: 1359441226
 Eve (RSA): Han
+	RSA privatekey: 444777
 Eve (ElGamal): Rain
 
 
@@ -61,5 +62,7 @@ Alice: Zahra
 	RSA: Prime: 1769364996067548066402624820326407074293, Public key:1273088781689364742877410587121282617805
 	ElGamal: Prime:3972484403, Public Key:1214996363, generator:3921742394
 Bob: Han
+	RSA:ciphertext:1737919386992287992728158582153990648014
+	ElGamal ciphertext: 3421735214
 Eve (RSA): Rain
 Eve (ElGamal): Uzay
