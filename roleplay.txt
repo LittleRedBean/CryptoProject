@@ -63,7 +63,7 @@ Alice: Zahra
 	RSA: Prime: 11760545130733189561 Public key:2950409469138680493
 	ElGamal: Prime:3972484403, Public Key:1214996363, generator:3921742394
 Bob: Han
-	RSA:ciphertext:
+	RSA:ciphertext:10540315581705643400
 	ElGamal ciphertext: 3421735214
 Eve (RSA): Rain
 	
