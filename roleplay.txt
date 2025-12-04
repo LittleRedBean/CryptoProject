@@ -17,7 +17,7 @@ Alice: Han
 	plaintext? :MoMo
 Bob: Rain
 	RSA ciphertext: 6116458212281869526
-	ElGamal ciphertext: 478020306
+	ElGamal ciphertext: 2020660508
 	Prime:3972484403, Public Key:2764685244, generator:3921742394
 Eve (RSA): Uzay
 	RSA privatekey: 17
