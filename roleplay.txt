@@ -27,7 +27,7 @@ Eve (ElGamal): Zahra
 Round 2
 Alice: Rain
 	RSA: Prime: 13065909094938011617, Public key:7394654827089811353
-	plaintext? :
+	plaintext? : GLCT
 	Elgmal: Prime:3409907867, Public Key:1760433634, generator:2164262515
 	plaintext? :
 Bob: Uzay
@@ -55,6 +55,7 @@ Bob: Zahra
 Eve (RSA): Han
 	RSA privatekey: 444777
 Eve (ElGamal): Rain
+	Elgamal privatekey: Your i*m + j is: 9*47025 + 21552 = 444777
 
 
 Round 4
@@ -65,4 +66,5 @@ Bob: Han
 	RSA:ciphertext:1737919386992287992728158582153990648014
 	ElGamal ciphertext: 3421735214
 Eve (RSA): Rain
+	
 Eve (ElGamal): Uzay
