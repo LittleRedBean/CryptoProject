@@ -29,7 +29,7 @@ Alice: Rain
 	RSA: Prime: 13065909094938011617, Public key:7394654827089811353
 	plaintext? : GLCT
 	Elgmal: Prime:3409907867, Public Key:1760433634, generator:2164262515
-	plaintext? :
+	plaintext? : hiHi
 Bob: Uzay
 	RSA ciphertext: 9708876836190433056
 	ElGamal ciphertext: 626250186
