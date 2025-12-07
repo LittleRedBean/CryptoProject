@@ -4,8 +4,22 @@ A Python-based cryptography tool implementing **Diffie–Hellman key exchange** 
 This project was developed as part of the *CS789 Cryptography* course at Boston University.
 
 ## 🧠 Features
-- Diffie–Hellman (DH) key exchange simulation
-- RSA encryption and decryption support
+
+**Diffie–Hellman / ElGamal**
+  - Safe-prime and generator generation
+  - ElGamal encryption and decryption over \( \mathbb{Z}_p^* \)
+  - Baby-step Giant-step discrete log **cracker** for small parameters
+
+- **RSA**
+  - RSA key generation (using safe primes)
+  - RSA encryption and decryption
+  - Simple RSA **cracker** for small moduli (factors \(n\), recovers \(d\), and decrypts)
+
+- **Utilities**
+  - Random prime / safe prime generation
+  - Modular inverse via extended Euclidean algorithm
+  - String ↔ integer conversion helpers
+  - Built-in runtime measurement for all main crypto operations
 
 ## ⚙️ Requirements
 - Python 3.9 or later
