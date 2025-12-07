@@ -65,7 +65,7 @@ Alice: Zahra
 Bob: Han
 	RSA:ciphertext:10540315581705643400
 	ElGamal ciphertext: 3421735214
-	Prime: , Public Key: , generator: 
+	ElGamal:  Prime:3972484403, Public Key:3344674192, generator:3921742394
 Eve (RSA): Rain
 
 Eve (ElGamal): Uzay
