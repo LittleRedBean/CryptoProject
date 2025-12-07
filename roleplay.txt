@@ -67,5 +67,6 @@ Bob: Han
 	ElGamal ciphertext: 2205127990
 	ElGamal:  Prime:3059612603, Public Key:896253028, generator:287776787
 Eve (RSA): Rain
-
+	RSA private key: 20252025
 Eve (ElGamal): Uzay
+	Elgamal privatekey: Your i*m + j is: 321*63028 + 20037 = 20252025
